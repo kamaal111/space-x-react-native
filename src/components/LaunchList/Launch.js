@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function Launch({ missionName, flightNumber }) {
+export default function Launch({ flightNumber, missionName }) {
   return (
     <View
       style={{
