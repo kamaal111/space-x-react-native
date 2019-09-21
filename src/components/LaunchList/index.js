@@ -1,52 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Text, View, FlatList, ScrollView } from 'react-native';
-import { get } from 'superagent';
+import { useQuery } from '@apollo/react-hooks';
 
 import Launch from './Launch';
 
-import { baseUrl } from '../../../config';
+import { allLaunches as allLaunchesQueries } from '../../queries/launches';
 
 export default function LaunchList() {
-  const [data, setData] = useState(null);
-  const [errors, setErrors] = useState(null);
+  const { loading, error, data: queryData } = useQuery(allLaunchesQueries);
 
-  const fetchAndSaveData = async () => {
-    try {
-      const { body } = await get(`${baseUrl}/v1/launches`);
-      return setData(body.data);
-    } catch (error) {
-      return setErrors(error);
-    }
-  };
+  if (loading) return <Text>Loading...</Text>;
+  if (error) return <Text>Oops something went wrong 😢</Text>;
 
-  useEffect(() => {
-    fetchAndSaveData();
-  }, []);
-
-  const flatListData =
-    data === null
-      ? []
-      : data.map(
-          ({ flight_number: flightNumber, mission_name: missionName }) => ({
-            key: String(flightNumber),
-            missionName,
-            flightNumber,
-          }),
-        );
+  const flatListData = queryData.allLaunches.map(
+    ({ flightNumber, missionName }, index) => ({
+      flightNumber,
+      missionName,
+      key: String(index),
+    }),
+  );
 
   const renderItem = ({ item }) => (
-    <Launch missionName={item.missionName} flightNumber={item.flightNumber} />
+    <Launch flightNumber={item.flightNumber} missionName={item.missionName} />
   );
 
   return (
     <ScrollView>
       <View>
-        {errors === null ? <></> : <Text>{errors}</Text>}
-        {data === null ? (
-          <Text>loading</Text>
-        ) : (
-          <FlatList data={flatListData} renderItem={renderItem} />
-        )}
+        <FlatList data={flatListData} renderItem={renderItem} />
       </View>
     </ScrollView>
   );
