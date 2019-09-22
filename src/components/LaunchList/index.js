@@ -6,9 +6,18 @@ import Launch from './Launch';
 
 import styles from './styles';
 import { allLaunches as allLaunchesQueries } from '../../queries/launches';
+// import {
+//   loading as loadingLog,
+//   error as errorLog,
+//   queryData as queryDataLog,
+// } from '../../graphqlLogs';
 
-export default function LaunchList() {
+export default function LaunchList({ navigation }) {
   const { loading, error, data: queryData } = useQuery(allLaunchesQueries);
+
+  // loadingLog(loading);
+  // queryDataLog(queryData);
+  // errorLog(error);
 
   if (loading) return <Text>Loading...</Text>;
   if (error) return <Text>Oops something went wrong 😢</Text>;
@@ -30,6 +39,7 @@ export default function LaunchList() {
     <Launch
       flightNumber={item.flightNumber}
       missionName={item.missionName}
+      navigate={navigation.navigate}
       styles={launchStyles}
     />
   );
