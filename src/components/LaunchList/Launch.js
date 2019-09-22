@@ -1,11 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
-export default function Launch({ flightNumber, missionName, styles }) {
+export default function Launch({
+  flightNumber,
+  missionName,
+  styles,
+  navigate,
+}) {
   return (
-    <View style={styles.launchContainer}>
+    <TouchableOpacity
+      style={styles.launchContainer}
+      onPressIn={() => navigate('LaunchDetailsScreen')}>
       <Text style={styles.launchText}>{missionName}</Text>
       <Text style={styles.launchText}>{`Flight Number: ${flightNumber}`}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
