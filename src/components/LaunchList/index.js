@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import Launch from './Launch';
 
+import styles from './styles';
 import { allLaunches as allLaunchesQueries } from '../../queries/launches';
 
 export default function LaunchList() {
@@ -20,8 +21,17 @@ export default function LaunchList() {
     }),
   );
 
+  const launchStyles = {
+    launchContainer: styles.launchContainer,
+    launchText: styles.launchText,
+  };
+
   const renderItem = ({ item }) => (
-    <Launch flightNumber={item.flightNumber} missionName={item.missionName} />
+    <Launch
+      flightNumber={item.flightNumber}
+      missionName={item.missionName}
+      styles={launchStyles}
+    />
   );
 
   return (
