@@ -36,6 +36,7 @@ export default function LaunchList({ navigation }) {
         links,
         rocket,
         upcoming,
+        staticFireDateUnix,
       },
       index,
     ) => ({
@@ -48,6 +49,7 @@ export default function LaunchList({ navigation }) {
       links,
       rocket,
       upcoming,
+      staticFireDateUnix,
       key: String(index),
     }),
   );
@@ -70,6 +72,7 @@ export default function LaunchList({ navigation }) {
       links={item.links}
       rocket={item.rocket}
       upcoming={item.upcoming}
+      staticFireDateUnix={item.staticFireDateUnix}
       navigate={navigation.navigate}
       styles={launchStyles}
     />

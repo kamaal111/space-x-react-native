@@ -11,6 +11,7 @@ export default function Launch({
   links,
   rocket,
   upcoming,
+  staticFireDateUnix,
   styles,
   navigate,
 }) {
@@ -24,6 +25,7 @@ export default function Launch({
     links,
     rocket,
     upcoming,
+    staticFireDateUnix,
   };
 
   return (

@@ -84,10 +84,6 @@ const Rocket = `
   }
 `;
 
-const Telemetry = `
-  flightClub
-`;
-
 const LaunchSite = `
   siteId
   siteName
@@ -110,28 +106,6 @@ const Links = `
   flickrImages
 `;
 
-// const Timeline = `
-//   webcastLiftoff
-//   goForPropLoading
-//   rp1Loading
-//   stage1LoxLoading
-//   stage2LoxLoading
-//   engineChill
-//   prelaunchChecks
-//   propellantPressurization
-//   goForLaunch
-//   ignition
-//   liftoff
-//   maxq
-//   meco
-//   stageSep
-//   secondStageIgnition
-//   fairingDeploy
-//   payloadDeploy1
-//   secondStageRestart
-//   payloadDeploy2
-// `;
-
 const AllLaunches = `
   flightNumber
   missionName
@@ -151,10 +125,6 @@ const AllLaunches = `
 
   rocket {
     ${Rocket}
-  }
-
-  telemetry {
-    ${Telemetry}
   }
 
   launchSite {
