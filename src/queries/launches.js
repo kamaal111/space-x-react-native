@@ -110,27 +110,27 @@ const Links = `
   flickrImages
 `;
 
-const Timeline = `
-  webcastLiftoff
-  goForPropLoading
-  rp1Loading
-  stage1LoxLoading
-  stage2LoxLoading
-  engineChill
-  prelaunchChecks
-  propellantPressurization
-  goForLaunch
-  ignition
-  liftoff
-  maxq
-  meco
-  stageSep
-  secondStageIgnition
-  fairingDeploy
-  payloadDeploy1
-  secondStageRestart
-  payloadDeploy2
-`;
+// const Timeline = `
+//   webcastLiftoff
+//   goForPropLoading
+//   rp1Loading
+//   stage1LoxLoading
+//   stage2LoxLoading
+//   engineChill
+//   prelaunchChecks
+//   propellantPressurization
+//   goForLaunch
+//   ignition
+//   liftoff
+//   maxq
+//   meco
+//   stageSep
+//   secondStageIgnition
+//   fairingDeploy
+//   payloadDeploy1
+//   secondStageRestart
+//   payloadDeploy2
+// `;
 
 const AllLaunches = `
   flightNumber
@@ -163,10 +163,6 @@ const AllLaunches = `
 
   links {
     ${Links}
-  }
-
-  timeline {
-    ${Timeline}
   }
 `;
 
