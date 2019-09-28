@@ -1,5 +1,12 @@
 import { StyleSheet } from 'react-native';
 
+const launchDetailsTextStyle = {
+  color: secondaryColor,
+  marginTop: screenHeight / 50,
+  marginLeft: screenWidth / 50,
+  marginRight: screenWidth / 50,
+};
+
 import {
   primaryColor,
   borderRadius,
@@ -22,8 +29,35 @@ export default StyleSheet.create({
     backgroundColor: primaryColor,
   },
   launchDetailsText: {
-    color: secondaryColor,
+    ...launchDetailsTextStyle,
     fontSize: mediumFontSize,
     fontWeight: '300',
+  },
+  flightNumber: {
+    ...launchDetailsTextStyle,
+    fontSize: mediumFontSize,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  flickerImageContainer: {
+    alignItems: 'center',
+    marginTop: screenHeight / 50,
+  },
+  flickerImage: {
+    height: screenHeight / 3,
+    width: screenWidth / 1.2,
+    borderRadius,
+  },
+  linkLogosContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  linkLogoContainer: {
+    marginTop: screenHeight / 50,
+    marginBottom: screenHeight / 50,
+  },
+  linkLogo: {
+    height: screenHeight / 12.5,
+    width: screenWidth / 7.5,
   },
 });
