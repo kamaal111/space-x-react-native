@@ -31,7 +31,8 @@ export default function Launch({
   return (
     <TouchableOpacity
       style={styles.launchContainer}
-      onPressIn={() => navigate('LaunchDetailsScreen', launchData)}>
+      onPressIn={() => navigate('LaunchDetailsScreen', launchData)}
+    >
       <Text style={styles.launchText}>{missionName}</Text>
       <Text style={styles.launchText}>{`Flight Number: ${flightNumber}`}</Text>
     </TouchableOpacity>
