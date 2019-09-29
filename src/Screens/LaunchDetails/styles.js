@@ -1,12 +1,4 @@
 import { StyleSheet } from 'react-native';
-
-const launchDetailsTextStyle = {
-  color: secondaryColor,
-  marginTop: screenHeight / 50,
-  marginLeft: screenWidth / 50,
-  marginRight: screenWidth / 50,
-};
-
 import {
   primaryColor,
   borderRadius,
@@ -15,6 +7,13 @@ import {
   mediumFontSize,
 } from '../../theme';
 import { screenWidth, screenHeight } from '../../dimensions';
+
+const launchDetailsTextStyle = {
+  color: secondaryColor,
+  marginTop: screenHeight / 50,
+  marginLeft: screenWidth / 50,
+  marginRight: screenWidth / 50,
+};
 
 export default StyleSheet.create({
   launchDetailsContainer: {
@@ -59,6 +58,7 @@ export default StyleSheet.create({
   youtubeVideoContainer: {
     alignItems: 'center',
     marginTop: screenHeight / 50,
+    marginBottom: screenHeight / 50,
   },
   youtubeVideo: {
     height: screenHeight / 3,

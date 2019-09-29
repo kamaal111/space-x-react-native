@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, FlatList, ScrollView } from 'react-native';
 import { useQuery } from '@apollo/react-hooks';
 
-import Launch from './Launch';
+import Launch from '../../components/Launch';
 
 import styles from './styles';
 import { allLaunches as allLaunchesQueries } from '../../queries/launches';

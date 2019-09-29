@@ -1,9 +1,9 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import Home from './components/Home';
-import LaunchList from './components/LaunchList';
-import LaunchDetails from './components/LaunchDetails';
+import Home from './Screens/Home';
+import LaunchList from './Screens/LaunchList';
+import LaunchDetails from './Screens/LaunchDetails';
 
 const Views = {
   HomeScreen: { screen: Home },
