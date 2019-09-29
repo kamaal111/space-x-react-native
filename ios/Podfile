@@ -32,4 +32,6 @@ target 'spaceXApp' do
 
   use_unimodules!
 
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
 end

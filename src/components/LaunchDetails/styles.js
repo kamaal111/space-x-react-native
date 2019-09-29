@@ -56,6 +56,14 @@ export default StyleSheet.create({
     marginTop: screenHeight / 50,
     marginBottom: screenHeight / 50,
   },
+  youtubeVideoContainer: {
+    alignItems: 'center',
+    marginTop: screenHeight / 50,
+  },
+  youtubeVideo: {
+    height: screenHeight / 3,
+    width: screenWidth / 1.2,
+  },
   linkLogo: {
     height: screenHeight / 12.5,
     width: screenWidth / 7.5,

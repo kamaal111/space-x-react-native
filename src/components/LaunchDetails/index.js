@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Linking,
 } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 import styles from './styles';
 
@@ -85,6 +86,21 @@ export default function LaunchDetails({ navigation }) {
             />
           </View>
         )}
+
+        {videoLink === null ? (
+          <></>
+        ) : (
+          <View style={styles.youtubeVideoContainer}>
+            <WebView
+              style={styles.youtubeVideo}
+              source={{ uri: videoLink }}
+              mediaPlaybackRequiresUserAction
+              javaScriptEnabled
+              domStorageEnabled
+            />
+          </View>
+        )}
+
         <View style={styles.linkLogosContainer}>
           {wikipediaUrl === null ? (
             <></>
