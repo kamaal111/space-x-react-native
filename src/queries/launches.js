@@ -136,6 +136,7 @@ const AllLaunches = `
   }
 `;
 
+// eslint-disable-next-line import/prefer-default-export
 export const allLaunches = gql`
   {
     allLaunches {

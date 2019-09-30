@@ -24,6 +24,7 @@ module.exports = {
         code: 100,
       },
     ],
+    'jsx-a11y/accessible-emoji': ['off'],
     'prefer-promise-reject-errors': ['warn'],
     'react/jsx-filename-extension': ['off'],
     'react/prop-types': ['off'],
