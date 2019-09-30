@@ -13,7 +13,7 @@ export default function LaunchDetails({ navigation }) {
     launchSuccess,
     links,
     missionName,
-    // rocket,
+    rocket,
     launchSite,
     upcoming,
     staticFireDateUnix,
@@ -54,21 +54,9 @@ export default function LaunchDetails({ navigation }) {
   // eslint-disable-next-line global-require
   const wikipediaLogo = require('../../assets/wikipedia-logo.png');
 
-  const launchDetailsViewStyles = {
-    flightNumber: styles.flightNumber,
-    launchDetailsText: styles.launchDetailsText,
-    flickerImageContainer: styles.flickerImageContainer,
-    flickerImage: styles.flickerImage,
-    youtubeVideoContainer: styles.youtubeVideoContainer,
-    youtubeVideo: styles.youtubeVideo,
-    linkLogosContainer: styles.linkLogosContainer,
-    linkLogo: styles.linkLogo,
-  };
-
   return (
     <ScrollView style={styles.launchDetailsContainer}>
       <LaunchDetailsView
-        styles={launchDetailsViewStyles}
         flightNumber={flightNumber}
         successfulOrNotCall={successfulOrNotCall}
         convertedLaunchDateUnix={convertedLaunchDateUnix}
@@ -82,6 +70,8 @@ export default function LaunchDetails({ navigation }) {
         videoLink={videoLink}
         wikipediaUrl={wikipediaUrl}
         wikipediaLogo={wikipediaLogo}
+        rocket={rocket}
+        navigation={navigation}
       />
     </ScrollView>
   );

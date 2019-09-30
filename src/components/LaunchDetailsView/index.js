@@ -4,9 +4,11 @@ import { View, Text } from 'react-native';
 import FlickrImage from './FlickrImage';
 import YouTubeWebView from './YouTubeWebView';
 import LinkLogos from '../LinkLogos';
+import LaunchRocket from '../LaunchRocket';
+
+import styles from './styles';
 
 export default function LaunchDetailsView({
-  styles,
   flightNumber,
   successfulOrNotCall,
   convertedLaunchDateUnix,
@@ -20,6 +22,8 @@ export default function LaunchDetailsView({
   videoLink,
   wikipediaUrl,
   wikipediaLogo,
+  rocket,
+  navigation,
 }) {
   const flickrImageStyles = {
     flickerImageContainer: styles.flickerImageContainer,
@@ -39,9 +43,7 @@ export default function LaunchDetailsView({
 
   return (
     <View>
-      <Text style={styles.flightNumber}>
-        {`Flight number: ${flightNumber}`}
-      </Text>
+      <Text style={styles.title}>{`Flight number: ${flightNumber}`}</Text>
       <Text style={styles.launchDetailsText}>
         {`${successfulOrNotCall} ${convertedLaunchDateUnix}`}
       </Text>
@@ -69,6 +71,17 @@ export default function LaunchDetailsView({
           randomFlickerImage={randomFlickerImage}
         />
       )}
+
+      <LaunchRocket
+        styles={{
+          launchDetailsText: styles.launchDetailsText,
+          title: styles.title,
+          rocketNameContainer: styles.rocketNameContainer,
+          rocketName: styles.rocketName,
+        }}
+        rocket={rocket}
+        navigation={navigation}
+      />
 
       {videoLink === null ? (
         <></>
