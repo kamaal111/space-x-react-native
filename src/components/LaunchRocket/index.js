@@ -1,9 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text, TouchableOpacity } from 'react-native';
+
+import FirstStage from '../FirstStage';
 
 export default function LaunchRocket({ styles, rocket, navigation }) {
-  const { rocketName, fairings } = rocket;
+  const { rocketName, fairings, firstStage } = rocket;
+
+  const firstStageStyles = {
+    coresText: styles.coresText,
+    title: styles.title,
+    coresContainer: styles.coresContainer,
+  };
 
   const fairingRecovery = (recoveryAttempt, recovered) => {
     if (recoveryAttempt === null && recovered === null) {
@@ -57,6 +64,8 @@ export default function LaunchRocket({ styles, rocket, navigation }) {
           {fairingRecovery(fairings.recoveryAttempt, fairings.recovered)}
         </>
       )}
+
+      <FirstStage styles={firstStageStyles} cores={firstStage.cores} />
     </View>
   );
 }

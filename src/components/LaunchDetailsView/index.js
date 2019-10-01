@@ -33,12 +33,22 @@ export default function LaunchDetailsView({
   const youTubeVideoStyles = {
     youtubeVideoContainer: styles.youtubeVideoContainer,
     youtubeVideo: styles.youtubeVideo,
+    title: styles.title,
   };
 
   const linkLogoStyles = {
     linkLogosContainer: styles.linkLogosContainer,
     linkLogoContainer: styles.linkLogoContainer,
     linkLogo: styles.linkLogo,
+  };
+
+  const launchRocketStyles = {
+    launchDetailsText: styles.launchDetailsText,
+    title: styles.title,
+    rocketNameContainer: styles.rocketNameContainer,
+    rocketName: styles.rocketName,
+    coresText: styles.coresText,
+    coresContainer: styles.coresContainer,
   };
 
   return (
@@ -73,12 +83,7 @@ export default function LaunchDetailsView({
       )}
 
       <LaunchRocket
-        styles={{
-          launchDetailsText: styles.launchDetailsText,
-          title: styles.title,
-          rocketNameContainer: styles.rocketNameContainer,
-          rocketName: styles.rocketName,
-        }}
+        styles={launchRocketStyles}
         rocket={rocket}
         navigation={navigation}
       />

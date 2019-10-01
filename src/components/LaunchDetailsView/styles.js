@@ -40,7 +40,6 @@ export default StyleSheet.create({
   },
   youtubeVideoContainer: {
     alignItems: 'center',
-    marginTop: screenHeight / 50,
     marginBottom: screenHeight / 50,
   },
   youtubeVideo: {
@@ -63,6 +62,15 @@ export default StyleSheet.create({
     paddingBottom: screenHeight / 50,
     ...launchDetailsTextStyle,
     fontSize: mediumFontSize,
+    fontWeight: '300',
+  },
+  coresContainer: {},
+  coresText: {
+    paddingBottom: screenHeight / 50,
+    marginLeft: screenWidth / 50,
+    marginRight: screenWidth / 50,
+    fontSize: mediumFontSize,
+    color: secondaryColor,
     fontWeight: '300',
   },
 });
